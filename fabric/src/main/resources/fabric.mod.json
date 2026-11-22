@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "rongmc_jsblock",
+  "version": "${version}",
+  "name": "Joban Client Mod",
+  "description": "Railway facilities addon for MTR 4 mod",
+  "authors": [
+    "LX86"
+  ],
+  "contributors": [
+    "1081MTR",
+    "AozoraSky",
+    "StrikeSNC",
+    "Dooji",
+    "Jonathan Ho",
+    "CinderaceOTS"
+  ],
+  "contact": {
+    "homepage": "https://www.joban.org/jcm",
+    "sources": "https://github.com/DistrictOfJoban/Joban-Client-Mod",
+    "issues": "https://github.com/DistrictOfJoban/Joban-Client-Mod/issues"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/jsblock/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.lx862.jcm.entrypoint.Main"
+    ],
+    "client": [
+      "com.lx862.jcm.entrypoint.MainClient"
+    ],
+    "modmenu": [
+      "com.lx862.jcm.entrypoint.ModMenuConfig"
+    ]
+  },
+  "mixins": [
+    "jsblock.mixins.json"
+  ],
+  "depends": {
+    "java": ">=21",
+    "fabricloader": ">=0.19.0",
+    "minecraft": "${minecraft_version}",
+    "fabric-api": "*",
+    "rongmc_mtr": "${mtr_version}"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://joban.org/dc"
+      },
+      "update_checker": true
+    }
+  },
+  "provides": [
+    "jsblock"
+  ]
+}

@@ -1,0 +1,20 @@
+// Minecraft 26.3 configuration is shared by the root build.
+dependencies {
+    implementation 'org.mozilla:rhino:1.7.15'
+    include 'org.mozilla:rhino:1.7.15'
+}
+def legacyResourceValues = new Properties()
+file('../gradle.properties').withInputStream { legacyResourceValues.load(it) }
+processResources {
+    inputs.property 'legacyFallbackFont', legacyResourceValues.getProperty('modern_fallback_font')
+    inputs.property 'automaticDoorBlockstate', legacyResourceValues.getProperty('mc_door_119')
+    filesMatching('**/font/*.json') {
+        filter { line -> line.replace('${legacy_unicode}', legacyResourceValues.getProperty('modern_fallback_font')) }
+    }
+    filesMatching('**/blockstates/auto_iron_door.json') {
+        filter { line -> line.replace('${mc_door_blockstate}', legacyResourceValues.getProperty('mc_door_119')) }
+    }
+    filesMatching('**/loot_table/blocks/*.json') {
+        filter { line -> line.replace('${condition}', 'any_of') }
+    }
+}
