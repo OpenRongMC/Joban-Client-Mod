@@ -1,31 +1,54 @@
-# Joban Client Mod (RongMC)
+<p align="center">
+  <img src="assets/JCM_logo.png" width="180px" alt="JCM Logo">
+</p>
 
-[中文](#中文) | [English](#english)
+<h1 align="center">
+  Joban Client Mod
+</h1>
 
-## 中文
+<p align="center">Bring your transit world to life with various decoration blocks!</p>
 
-本仓库发布的是 **RongMC** 对 `Joban Client Mod` 的 Minecraft 26.3 Fabric 移植/维护或自研版本。
+<p align="center">
+  <a href="https://modrinth.com/mod/jcm">
+    <img alt="Available on Modrinth" height="50" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">
+  </a>
+  <a href="https://discord.com/invite/FNc2rgWmP2">
+    <img alt="Chat with us on Discord" height="50" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/social/discord-plural_vector.svg">
+  </a>
+</p>
 
-- Fabric mod id：`rongmc_jsblock`（provides：`jsblock`）
-- 许可证：**GNU GPL v3.0**
-- 本仓库包含完整源码（orphan 发布，Contributors 仅 ycrrongos）。
-- 部分改动由 vibecoding（AI 辅助编程）完成，并由人工审阅与测试。
-- 贡献者（Contributors）：仅 [ycrrongos](https://github.com/ycrrongos)
+Joban Client Mod is an addon mod for the **Minecraft Transit Railway 4.0**, adding various blocks from **Emergency stop button**, **Helpline** to fully customizable Passenger Information Display System and more!  
 
-### 许可
+This repository contains the source code for Joban Client Mod.
 
-以 GNU General Public License v3.0 发布（见 `LICENSE`）。若上游原作另有条款，移植改动部分仍按 GPL-3.0；使用时请同时尊重上游要求。
+## Future plans
+Due to the shift away from **Minecraft Mappings** in the upcoming MTR version, JCM will need to make sweeping changes to adapt.
 
-## English
+A [port of JCM v2 for NeoMTR (MTR 3/Architectury)](https://github.com/DistrictOfJoban/NeoMTR/tree/lx/common/src/main/java/com/lx862/jcm) have been made, which is expected to align closer with the architectury port of MTR. 
 
-**RongMC** Minecraft 26.3 Fabric port / maintenance / original build of `Joban Client Mod`.
+## Links
+- [Website](https://www.joban.org/jcm)
+- Documentation (Work In Progress!)
 
-- Fabric mod id: `rongmc_jsblock` (provides: `jsblock`)
-- License: **GNU GPL v3.0**
-- This repository includes full source (orphan publish; contributor: ycrrongos only).
-- Some changes were made with vibecoding (AI-assisted coding), then reviewed and tested by humans.
-- Contributors: only [ycrrongos](https://github.com/ycrrongos)
+## License
+This project is licensed under the MIT License.
 
-### License
+---
 
-Released under GNU GPL v3.0 (see `LICENSE`). Respect upstream terms where applicable; RongMC changes are GPL-3.0.
+## RongMC · Minecraft 26.3 Fabric 移植说明
+
+本仓库是 RongMC 维护的 **Minecraft 26.3 / Fabric / Java 25** 移植构建，不是上游官方发行渠道。
+
+### 与原版的主要差异
+- 依赖本组织的 `rongmc_mtr`（而非上游官方 MTR jar）。
+- Fabric id：`rongmc_jsblock`（provides `jsblock`）；目标 MC 26.3。
+
+### 已知问题 / 限制
+- 上游 README 提到的 NeoMTR / 映射层迁移规划与本移植无关；本仓只维护 26.3 Fabric 可用构建。
+- PIDS / 装饰方块在极端资源包冲突下可能出现贴图或字体回退（与上游同类风险）。
+
+### 构建与安装
+- Fabric mod id：`rongmc_jsblock`（`provides`：`jsblock`，旧依赖名一般仍可解析）
+- Release 产物见本仓库 Releases（jar 名带 `rongmc-` 前缀）
+- 许可证：本仓以 **GPL-3.0** 发布（见 `LICENSE`）；请同时尊重上游原作者条款与署名
+
